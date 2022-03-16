@@ -31,6 +31,35 @@
 - 김종표 : dm
 - ~~여준구 : 머아패아지~~
 
-## DB 생성
+## 개발 환경
 
-## MVC2 모델 사용
+여기에 사진 사진
+
+- Window 10
+- Apache Tomcat
+- eclipse
+- Java
+- ORACLE
+- DBeaver
+
+## 주력 기술
+
+여기에 사진 사진
+
+- Myatis
+- HTML
+- CSS
+- JavaScript
+- JSP
+- JSON
+- AJAX
+- JQuery
+
+## Time table
+
+## ERD
+
+## 프로세스 흐름도
+
+mvc model 2 
+
