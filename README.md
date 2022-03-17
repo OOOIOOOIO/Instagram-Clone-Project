@@ -59,7 +59,7 @@
 
 ## ERD
 
-## 프로세스 흐름도
+## Flow Chart
 
 <hr>
 
