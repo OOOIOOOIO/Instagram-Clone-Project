@@ -1,0 +1,179 @@
+@charset "UTF-8";
+body{
+		margin: 0px;
+		overflow-y: scroll;
+	}
+nav{
+	    width: 100%;
+	    height: 59px;
+	    position: fixed;
+	    background-color: white;
+	    border-bottom: 1px solid #DBDBDB;
+	    top: 0px;
+	}
+	.header{
+		width: 1000px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.search{
+	    width: 267px;
+	    height: 36px;
+	    padding: 7px;
+	    font-size: 17px;
+	    border-radius: 7px;
+	    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACI0lEQVRIie2Uv2sTcRjGP+/lKqZNLUVrp2wq/mhBJxddWnF0SOsVEhpwKEUCgv9A5zgLocGtUq+cQZCMWg/r5FAQWkFXaatEEfxRhFzu+zqkwZL2rqeufZY7eO95Pt/vA/fCoQ6QRA08z0sHoc4IMqlwDugHNgVZVqPVQsFZ/WeA69YuG8xjIBvhU5DKz+9f787OzgZxACsi3AeyCq8Vcq2mfWJwIHNU1BpRpQz8Ai31Hxt8pKqRLey5QbsW3gNZFa0esaTkOE7YbVpc9C5i8Rw4LiqlfP5mJdENglBnOiePCgcoFJw3onoLQEXnfN+3EwEEmdx5vRcV3lE+P1VHWAOGtxqNq4kACucBwqa9Ehf+xyArO88LiQBAH4Ax37YT5av+ABDIJAVsAaTS6VNJACKcaYPYTAYQfQFgGatwULjneUPAdcCEKV4mA4QyD6gId1y3dinKpKoShNynXU296DgfEgHav79UgF6DefbQ9W7sd/LFpdoSMAWgYspR4bDPqqhWqz2ZgUEXZWLnizVUVkTMNiqntV1L3y7L2zCwx4rFXCMRANoVuG7ttorOAcNdYwPUVUzZUuuBwkgcJHaP+L5vb3z6ciWljKqYXsTaCC191el8YeHJSbuntawwIrDeCuzxbkgsIIk8zxsKDMsoo8A700qNTU9PfOzM92zTv5XjOJ/Dpn1NYB04a9nh093z/wYAFIu5RiuwxxFWgdgddqg9+g0TJuLzCuoJngAAAABJRU5ErkJggg==");
+	    background-size: 20px;
+	    background-repeat: no-repeat;
+	    background-position: 5% center;
+	    text-indent: 13%;
+	    border: none;
+	    background-color: #eeeeee;
+	    margin-left: 80px;
+	    margin-top: -6px;
+	}
+	.search2{
+		width:333px;
+	}
+	input:focus{
+		outline: none;
+	}
+	.insta_logo{
+		width: 290px;
+		margin-left: 12px;
+	}
+	.insta_menu{
+		width: 333px;
+		margin-left: 73px;
+		margin-right: 10px;
+	}
+	.insta_menu a{
+		margin-left: 4px;
+		margin-right: 4px;
+	}
+	.wrap{
+		width: 930px;
+		height: 760px;
+		border: 1px solid #DBDBDB;
+		position: relative;
+		margin: 0 auto;
+		margin-top: 90px; 
+	}
+	.list{
+		position: absolute;
+		border-right: 1px solid #DBDBDB;
+		border-bottom: 1px solid #DBDBDB;
+		width: 230px;
+		height: 590px;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		margin-bottom: 31px;
+		margin-left: -10px;
+	}
+	a{
+		text-decoration: none;
+	}
+	.change{
+		font-size: 0.9em;
+		color: dodgerblue;
+		font-weight: bold;
+	}
+	.set{
+		position: absolute;
+		width: 230px;
+		height: 169px;
+		border-right: 1px solid #DBDBDB;
+		bottom: 0;
+	}
+	.set img{
+		margin: 20px 20px;
+	}
+	.center{
+		color: dodgerblue;
+		display: inline;
+		margin-left: -90px;
+	}
+	.set div{
+		position: absolute;
+		width:80%;
+		font-size: 12px;
+		color: gray;
+		margin-top: 10px;
+		margin-left: 20px;
+	}
+	.main{
+		position: absolute;
+		width: 699px;
+		height: 760px;
+		right: 0;
+	}
+	.main h1{
+		font-weight: 200;
+		font-size: 28px;
+		margin: 60px 65px;
+	}
+	.main_info{
+		text-align: center;
+		width: 86%;
+		height: 35px;
+		border-bottom: 1px solid #DBDBDB;
+		margin-left: 60px;
+		margin-top: -25px;
+	}
+	.main_info span{
+		font-weight: bold;
+		color: gray;
+		font-weight: 500;
+		margin-left: 65px;
+		margin-right: 65px;
+	}
+	.story1{
+		margin-left: 65px;
+		width: 86%;
+		margin-top: 20px;
+	}
+	.story2{
+		margin-left: 65px;
+		margin-top: 20px;
+		color:gray;
+	}
+	a:link{ 
+		text-decoration:none; color:black;
+	}
+ 	a:visited{ 
+ 		text-decoration:none;color:black;
+ 	}
+ 	a:active{
+ 		text-decoration:none; color:black; 
+ 	}
+ 	a:hover{ 
+ 		text-decoration:none; color:black;
+ 	}
+ 	.change:link{ 
+		text-decoration:none; color:dodgerblue;
+	}
+ 	.change:visited{ 
+ 		text-decoration:none;color:dodgerblue;
+ 	}
+ 	.change:active{
+ 		text-decoration:none; color:dodgerblue;
+ 	}
+ 	.change:hover{
+ 		text-decoration:none; color:dodgerblue;
+ 	}
+ 	footer{
+		text-align: center;
+		font-size: 12px;
+		color: gray;
+		margin-top: 30px;
+	}
+	footer span{
+		margin-left: 7px;
+		margin-right: 7px;
+	}

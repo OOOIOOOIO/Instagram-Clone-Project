@@ -1,0 +1,922 @@
+@charset "UTF-8";
+	body{
+		margin: 0px;
+		overflow-y: scroll;
+		position: relative;
+	}
+	nav{
+		width: 100%;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid #DBDBDB;
+		position: fixed;
+		background-color: white;
+		z-index: 5;
+	}
+	.header{
+		width: 975px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.header-logo{
+		width: 353.5px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.header-logo img{
+		margin-left: 10px;
+	}
+	.header-search{
+		width: 268px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	#search{
+		width: 265px;
+	    height: 23px;
+	    padding: 7px;
+	    font-size: 16px;
+	    font-weight: lighter;
+	    border-radius: 7px;
+	    text-indent: 15%;
+	    border: none;
+	    background-color: #eeeeee;
+	}
+	#search:focus {
+		outline:none;
+	}
+	#search-icon{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+   		color: #9e9e9e;
+   		left: 15px;
+   		padding-top: 2px;
+	}
+	#delete-icon{
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		color: #9e9e9e;
+		right: 10px;
+		display: none;
+		padding-top: 2px;
+	}
+	.header-menu{
+		width: 353.5px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	.header-menu div{
+		margin-right: 12px;
+	}
+	.search-popup {
+		position: absolute;
+		background: white;
+		border-radius: .4em;
+		width: 373px;
+		height: 361px;
+		top: 61px;
+		left: -40px;
+		filter: drop-shadow(0 0 3px #bdbdbd);
+		display: none;
+		overflow: hidden;
+	}
+	.search-popup:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 11px solid transparent;
+		border-bottom-color: white;
+		border-top: 0;
+		margin-left: -11px;
+		margin-top: -11px;
+	}
+	.recent-menu{
+		width: 340px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		margin: 15px;
+	}
+	.recent-search{
+		width: 170px;
+		font-weight: bold;
+	}
+	.recent-remove{
+		width: 170px;
+		display: flex;
+		justify-content: flex-end;
+		font-size: 14px;
+		color: dodgerblue;
+		font-weight: bold;
+	}
+	.recent-remove:hover{
+		cursor: pointer;
+	}
+	.recent-search-user{
+		width: 340px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		margin-left: 15px;
+		margin-top: 9px;
+	}
+	.recent-search-user-profile{
+		width: 54px;
+		height: 44px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#recent-search-user-img{
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+	}
+	.recent-search-user-link{
+		width: 240px;
+		height: 44px;
+	}
+	#recent-search-user-name{
+		width: 240px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	#recent-search-user-etc{
+		width: 240px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+		color: gray;
+		font-size: 12px;
+	}
+	.recent-search-user-remove{
+		width: 40px;
+		height: 44px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.recent_user_remove{
+		width: 13px;
+		height: 13px;
+	}
+	#mypage-img:hover{
+		cursor: pointer;
+	}
+	.recent_user_remove:hover{
+		cursor: pointer;
+	}
+	.mypage-popup {
+		position: absolute;
+		background: white;
+		border-radius: .4em;
+		width: 228px;
+		height: 192px;
+		top: 55px;
+		display: none;
+		filter: drop-shadow(0 0 3px #bdbdbd);
+	}
+	.mypage-popup:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 91%;
+		width: 0;
+		height: 0;
+		border: 8px solid transparent;
+		border-bottom-color: white;
+		border-top: 0;
+		margin-left: -8px;
+		margin-top: -8px;
+	}
+	.mypage-profile-wrap, .mypage-save-wrap, .mypage-setting-wrap{
+		width: 228px;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+	.mypage-change-account-wrap{
+		width: 228px;
+		height: 39px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+	.logout-wrap{
+		width: 228px;
+		height: 39px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-top: 1px solid lightgray;
+		cursor: pointer;
+	}
+	.mypage-change-account, .logout{
+		width: 200px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+	}
+	.mypage-profile, .mypage-save, .mypage-setting{
+		width: 200px;
+		height: 20px;
+		display: flex;
+		align-items: center;
+	}
+	.mypage-profile img, .mypage-save img, .mypage-setting img, .mypage-change-account img{
+		width: 17px;
+		height: 17px;
+		border-radius: 50%;
+		padding-left: 5px;
+	}
+	.mypage-profile div, .mypage-save div, .mypage-setting div, .mypage-change-account div, .logout{
+		margin-left: 10px;
+		font-size: 14px;
+	}
+	.popup-background-see-all{
+		width: 100%;
+		height: 100%;
+		border: 1px solid gray;
+		position: fixed;
+		background: rgba(0,0,0,0.7);
+		z-index: 10;
+		display: none;
+	}
+	.see-all-wrap{
+		width: 400px;
+		height: 443px;
+		border: 1px solid gray;
+		border-radius: 10px;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		left: 50%;
+    	top: 50%;
+		z-index: 20;
+		background-color: white;
+	}
+	.similar-account-title{
+		width: 400px;
+		height: 43px;
+		border-bottom: 1px solid lightgray;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	#similar-account-close:hover{
+		cursor: pointer;
+	}
+	.similar-account-title div{
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		right: 0;
+		margin-right: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#account-close{
+		width: 20px;
+		height: 20px;
+	}
+	.similar-account-info{
+		width: 400px;
+		height: 400px;
+		text-align: center;
+		overflow-y: scroll;
+		scroll-behavior: smooth;
+	}
+	.similar-account-user-wrap{
+		width: 370px;
+		height: 65px;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+	}
+	.similar-account-user{
+		display: flex;
+		align-items: center;
+	}
+	.account-img{
+		width: 55px;
+		height: 44px;
+		display: inline-block;
+	}
+	.input-img{
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		border: 1px solid gray;
+		margin-left: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.input-img img{
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+	}
+	.account-info-id{
+		height: 17px;
+		font-weight: bold;
+		font-size: 13px;
+		text-align: left;
+		margin-left: 5px;
+	}
+	.account-info-name{
+		height: 14px;
+		text-align: left;
+		font-size: 14px;
+		margin-left: 5px;
+		color: gray;
+	}
+	.account-info-about{
+		height: 14px;
+		text-align: left;
+		font-size: 13px;
+		margin-left: 5px;
+		color: gray;
+		margin-top: 2px;
+	}
+	.account-info{
+		width: 225px;
+		height: 49px;
+		display: inline-block;
+	}		
+	.account-follow{
+		width: 62px;
+		height: 30px;
+		border: none;
+		background-color: dodgerblue;
+		color: white;
+		border-radius: 5px;
+		margin-left: 20px;
+		font-weight: bold;
+	}
+	.popup-background{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		display: none;
+		z-index: 10;
+	}
+	.block{
+		width: 400px; 
+		height: 192px; 
+		border-radius: 10px; 
+		border: none;
+		position: absolute;
+		z-index: 20;
+		transform: translate(-50%,-50%);
+		left: 50%;
+    	top: 50%;
+	}
+	button:hover{
+		cursor: pointer;
+	}
+	.block-btn1{
+		width: 400px; 
+		height: 48px; 
+		border-top-left-radius: 10px; 
+		border-top-right-radius: 10px; 
+		border: none; 
+		background-color: white; 
+		font-weight: bold; 
+		color: red; 
+		font-size: 14px;
+		background-color: white;
+	}
+	.block-btn2{
+		width: 400px; 
+		height: 48px; 
+		background-color: white; 
+		font-weight: bold; 
+		color: red; 
+		font-size: 14px; 
+		border:none; 
+		border-top: 1px solid lightgray;
+		background-color: white;
+	}
+	.block-btn3{
+		width: 400px; 
+		height: 48px; 
+		background-color: white; 
+		font-weight: bold; 
+		color: red; 
+		font-size: 14px; 
+		border:none; 
+		border-top: 1px solid lightgray;
+		background-color: white;
+	}
+	.cancel{
+		width: 400px;
+		height: 48px;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		background-color: white; 
+		font-weight: bold; 
+		font-size: 14px; 
+		border:none; 
+		border-top: 1px solid lightgray;
+		background-color: white;
+	}
+	main{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.main-part{
+		width: 935px;
+		display: flex;
+		justify-content: center;
+		padding-top: 80px;
+		position: relative;
+	}
+	.profile-info{
+		width: 935px;
+		height: 200px;
+	}
+	.profile-img{
+		width: 291px;
+		height: 200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		float: left;
+	}
+	.profile-img2{
+		width: 163px;
+		height: 163px;
+		position: relative;
+    	margin: 10px;
+    	border: 3px solid transparent;
+    	border-radius: 50%;
+    	background-image: linear-gradient(#fff, #fff), linear-gradient(210deg, #f50057 0%, orange 100%);
+    	background-origin: border-box;
+    	background-clip: content-box, border-box;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+	}
+	.profile-img3{
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.profile-img3 img{
+		width: 154px;
+		height: 154px;
+		border-radius: 50%;
+	}
+	.profile-section{
+		width: 613px;
+		height: 200px;
+		display: inline-block;
+		float: right;
+	}
+	.user-id{
+		width: 613px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+	}
+	.user-id h2{
+		min-width: 180px;
+		height: 32px;
+		margin: 0px;
+		font-weight: 300;
+		font-size: 28px;
+	}
+	.influencer{
+		display: none;
+	}
+	.message{
+		height: 30px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.button1{
+		width: 92px;
+		height: 30px;
+		border-radius: 3px;
+		background-color: dodgerblue;
+		color: white;
+		font-weight: bold;
+		font-size: 14px;
+		border: none;
+		cursor: pointer;
+		margin-right: 10px;
+	}
+	.button2{
+		width: 34px;
+		height: 30px;
+		border-radius: 3px;
+		background-color: white;
+		background-color: dodgerblue;
+		color: white;
+		border: none;
+		cursor: pointer;
+		margin-right: 10px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.button2 span{
+	    content: '';
+	    width: 5px;
+	    height: 5px;
+	    border-top: 1px solid white;
+	    border-right: 1px solid white;
+	    transform: rotate(135deg);
+	    position: absolute;
+	}
+	.button3{
+		width: 34px;
+		height: 30px;
+		border-radius: 3px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		border: none;
+	}
+	.follow{
+		width: 100%;
+		height: 18px;
+		padding: 0px;
+	}
+	ul{
+   		list-style:none;
+   	}
+   	li{
+   		display: inline-block;
+   		padding-right: 40px;
+   		cursor: pointer;
+   	}
+   	li span{
+   		font-weight: bold;
+   	}
+	.user-name{
+		height: 24px;
+		font-weight: bold;
+	}
+	.blog{
+		font-weight: bold;
+		cursor: pointer;
+	}
+	.taged-insta{
+		cursor: pointer;
+	}
+	.story-sub{
+		width: 935px;
+		height: 150px;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		scroll-behavior: smooth;
+	}
+	.story-sub-left{
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background-color: gray;
+		opacity: 0.5;
+		display: none;
+		cursor: pointer;
+		position: absolute;
+		background-image: url(https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-13-256.png);
+    	background-size: cover;
+    	background-position: center;
+	}
+	.story-sub-right{
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		background-color: gray;
+		opacity: 0.5;
+		cursor: pointer;
+		right: 0;
+		background-image: url(https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-14-256.png);
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+	}
+	.story-info{
+		width: 105px;
+		height: 130px;
+		padding-left: 30px;
+		margin-top: 20px;
+		flex-shrink: 0;
+	}
+	.story-img{
+		width: 87px;
+		height: 87px;
+	}
+	.story-text{
+		width: 85px;
+		height: 30px;
+		text-align: center;
+	}
+	.img-circle1{
+		border-radius: 50%;
+		width: 87px;
+		height: 87px;
+		border: 1px solid lightgray;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.img-circle1:hover{
+		cursor: pointer;
+	}
+	.img-circle2{
+		border-radius: 50%;
+		width: 77px;
+		height: 77px;
+		border: 1px solid lightgray;
+		position: relative;
+	}
+	.img-circle2 img{
+		border-radius: 50%;
+		width: 77px;
+		height: 77px;
+		position: absolute;
+	}
+	.popup-recommend{
+		width: 935px;
+		height: 240px;
+		border: 1px solid lightgray;
+		border-radius: 5px;
+		position: relative;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		position: relative;
+		display: none;
+	}
+	.recommend-left-btn{
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background-image: url(https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-13-256.png);
+		position: absolute;
+		background-size: cover;
+		background-position: center;
+		cursor: pointer;
+		opacity: 0.5;
+		display: none;
+	}
+	.recommend-right-btn{
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		background-image: url(https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-14-256.png);
+		position: absolute;
+		right: 0;
+		background-size: cover;
+		background-position: center;
+		cursor: pointer;
+		opacity: 0.5;
+	}
+	.see-all{
+		width: 885px;
+		height: 18px;
+		position: absolute;
+		margin-left: 30px;
+	}
+	.recommend-people{
+		width: 933px;
+		height: 215px;
+		margin-top: 20px;
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		scroll-behavior: smooth;
+	}
+	.recommend-people-wrap{
+		width: 170px;
+		height: 190px;
+		border: 1px solid lightgray;
+		flex-shrink: 0;
+		border-radius: 5px;
+		margin-left: 25px;
+		margin-top: 10px;
+	}
+	.recommend-delete-wrap-big{
+		width: 100%;
+		height: 25px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.recommend-delete-wrap-small{
+		width: 25px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#recommend-delete{
+		color: gray;
+	}	
+	#recommend-delete:hover{
+		cursor: pointer;
+	}
+	.recommend-people-info{
+		width: 100%;
+		height: 160px;
+	}
+	.recommend-people-img{
+		width: 100%;
+		height: 54px;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+	.recommend-people-img img{
+		width: 54px;
+		height: 54px;
+		border-radius: 50%;
+		position: absolute;
+	}
+	.recommend-people-id{
+		width: 100%;
+		height: 18px;
+		margin-top: 15px;
+		text-align: center;
+		font-weight: 700;
+		font-size: 14px;
+	}
+	.recommend-people-name{
+		width: 100%;
+		height: 18px;
+		text-align: center;
+		color: gray;
+		font-size: 14px;
+	}
+	.recommend-people-follow{
+		width: 100%;
+		height: 30px;
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+	}
+	.recommend-people-follow-btn{
+		width: 134px;
+		height: 30px;
+		border-radius: 5px;
+		background-color: dodgerblue;
+		color: white;
+		font-weight: bold;
+		font-size: 14px;
+		border: none;
+	}
+	.account{
+		font-weight: bold;
+		font-size: 14px;
+		color: gray;
+	}
+	.more-people{
+		font-weight: bold;
+		font-size: 14px;
+		color: dodgerblue;
+		margin-left: 85%;
+	}
+	.more-people:hover{
+		cursor: pointer;
+	}
+	.change-story{
+		width: 935px;
+		height: 53px;
+		margin-top: 35px;
+		display: flex;
+		justify-content: center;
+		border-top: 1px solid #DBDBDB;
+	}
+	.change-story-wrap{
+		width: 400px;
+		height: 53px;
+		display: flex;
+		justify-content: center;
+	}
+	.change-story-wrap span{
+		width: 100px;
+		font-size: 12px;
+		font-weight: bold;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.tag{
+		color: gray;
+		cursor: pointer;
+		border-top: none;
+	}
+	.reels{
+		color: gray;
+		cursor: pointer;
+		display: none;
+	}
+	.video{
+		color: gray;
+		cursor: pointer;
+		display: none;
+	}
+	.write{
+		border-top: 1px solid black;
+		cursor: default;
+	}
+	.story{
+		width: 935px;
+	}
+	.main-img{
+		width: 290px;
+		height: 290px;
+		border: 1px solid gray;
+		margin-left: 13px;
+		margin-top: 13px;
+	}
+	.tag-popup{
+		width: 935px;
+		height: 275px;
+		display: none;
+		margin-left: 43%;
+		margin-top: 50px;
+	}
+	.tag-popup-wrap{
+		width:140px;
+		height: 180px;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+	.no-tag-img{
+		width: 140px;
+		height: 70px;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.no-tag-text{
+		width: 140px;
+		height: 100px;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+	}
+	.no-tag-text h1{
+		margin: 0;
+		font-weight: lighter;
+		font-size: 28px;
+	}
+	.tag-popup-wrap img{
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		display: block;
+	}
+	footer{
+		text-align: center;
+		font-size: 12px;
+		color: gray;
+		padding-bottom: 10px;
+		display: block;
+	}
+	footer span{
+		margin-left: 7px;
+		margin-right: 7px;	
+	}
+	.stop-scroll{
+		height: 100%;
+		overflow: hidden;
+	}

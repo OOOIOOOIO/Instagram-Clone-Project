@@ -1,0 +1,344 @@
+@charset "UTF-8";
+body{
+	background-color: #fafafa;
+}
+/* heaeder 부분 */
+nav{
+	width: 100%;
+	height: 59px;
+	position: fixed;
+	background-color: white;
+	border-bottom: 1px solid #DBDBDB;
+	top: 0px;
+	left: 0px;
+}
+.header{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.searchinput{
+	width: 267px;
+	height: 36px;
+	padding: 7px;
+	font-size: 17px;
+	border-radius: 7px;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACI0lEQVRIie2Uv2sTcRjGP+/lKqZNLUVrp2wq/mhBJxddWnF0SOsVEhpwKEUCgv9A5zgLocGtUq+cQZCMWg/r5FAQWkFXaatEEfxRhFzu+zqkwZL2rqeufZY7eO95Pt/vA/fCoQ6QRA08z0sHoc4IMqlwDugHNgVZVqPVQsFZ/WeA69YuG8xjIBvhU5DKz+9f787OzgZxACsi3AeyCq8Vcq2mfWJwIHNU1BpRpQz8Ai31Hxt8pKqRLey5QbsW3gNZFa0esaTkOE7YbVpc9C5i8Rw4LiqlfP5mJdENglBnOiePCgcoFJw3onoLQEXnfN+3EwEEmdx5vRcV3lE+P1VHWAOGtxqNq4kACucBwqa9Ehf+xyArO88LiQBAH4Ax37YT5av+ABDIJAVsAaTS6VNJACKcaYPYTAYQfQFgGatwULjneUPAdcCEKV4mA4QyD6gId1y3dinKpKoShNynXU296DgfEgHav79UgF6DefbQ9W7sd/LFpdoSMAWgYspR4bDPqqhWqz2ZgUEXZWLnizVUVkTMNiqntV1L3y7L2zCwx4rFXCMRANoVuG7ttorOAcNdYwPUVUzZUuuBwkgcJHaP+L5vb3z6ciWljKqYXsTaCC191el8YeHJSbuntawwIrDeCuzxbkgsIIk8zxsKDMsoo8A700qNTU9PfOzM92zTv5XjOJ/Dpn1NYB04a9nh093z/wYAFIu5RiuwxxFWgdgddqg9+g0TJuLzCuoJngAAAABJRU5ErkJggg==");
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	text-indent: 13%;
+	border: none;
+	background-color: #eee;
+	margin-left: 40px;
+	margin-top: -6px;
+}
+.search{
+	width: 333px;
+}
+input:focus{
+	outline: none;
+}
+.instalogo{
+	width: 290px;
+	margin-left: 70px;
+}
+.instamenu{
+	width: 333px;
+	margin-left: 73px;
+	margin-right: 10px;
+}
+.instamenu a{
+	margin-left: 9px;
+	margin-right: 4px;
+	color: white;
+}
+/* header 끝*/
+
+/* 본문 부분 */
+.wrap{
+	width: 930px;
+	height: 760px;
+	border: 1px solid #DBDBDB;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 90px;
+	background-color: white;
+}
+
+.dm_name{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid #DBDBDB;
+	border-bottom: 1px solid #DBDBDB;
+	width: 369px;
+	height: 60px;
+}
+.dm_name_btn{
+	border: 0;
+	display: inline;
+	padding: 0;
+	position: absolute;
+	background-color: white;
+	cursor: pointer;
+}
+.name_wrap{
+	display: flex;
+	position: relative;
+	justify-content: flex-end;
+	align-items: center;
+}
+.user_name{
+	display: inline;
+	margin-right: 10px;
+}
+.name{
+	font-size: 16px;
+	font-weight: 600;
+}
+.down_arrow{
+	display: inline;
+	cursor: pointer;
+}
+.write_btn{
+	border: 0;
+	display: inline;
+	position: relative;
+	background-color: white;
+	margin-left: 300px;
+	cursor: pointer;
+}
+
+
+.dm_list{
+	position: absolute;
+	width: 369px;
+	height: 699px;
+	border-right: 1px solid #DBDBDB;
+	bottom: 0;
+}
+.dm_wrap{
+	width: 100%;
+	height: 100%;
+	padding-top: 8px;
+	overscroll-behavior: contain;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	overflow: hidden auto;
+}
+.list_wrap{
+	flex-direction: column;
+	padding-bottom: 792px;
+	padding-top: 0px;
+	align-items: stretch;
+	border: 0 solid #000;
+	box-sizing: border-box;
+	display: flex;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.dm_chatlist{
+	flex: 0 0 auto;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+	display: flex;
+	background-color: rgba(var(--d87,255,255,255),1);
+	flex-direction: column;
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.dm_chatlist:hover{
+	background-color: #fafafa;
+}
+.dm_chatlink, .dm_chatlink:visited{
+	cursor: pointer;
+	outline: 0;
+	color: rgba(var(--fe0,0,55,107),1);
+	text-decoration: none;
+}
+.dm_chatwrap{
+	justify-content: flex-start;
+	flex-direction: row;
+	align-items: center;
+	align-content: stretch;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.dm_profile{
+	margin-right: 12px;
+	margin-left: 20px;
+	flex: 0 0 auto;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.profile_link{
+	display: block;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.profile_img{
+	height: 100%;
+	width: 100%;
+}
+.listname_wrap{
+	flex: 1 1 auto;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+}
+.listname{
+	flex: 0 0 auto;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	box-sizing: border-box;
+	display: flex;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.msg_wrap{
+	flex: 0 0 auto;
+	margin-top: 8px;
+	justify-content: flex-start;
+	align-content: stretch;
+	align-items: stretch;
+	display: flex;
+	position: relative;
+	color: rgba(var(--f52,142,142,142),1);
+	white-space: nowrap;
+}
+.dot{
+	padding-left: 5px;
+}
+.time{
+	padding-left: 5px;
+}
+
+.dm_content{
+	position: absolute;
+	width: 560px;
+	heigth: 760px;
+	right: 0;
+}
+.airplane{
+	background-size: 569px 521px;
+	background-position: -330px 0;
+	background-image: url(https://www.instagram.com/static/bundles/es6/sprite_glyphs_2x_77929eccc37e.png/77929eccc37e.png);
+	background-repeat: no-repeat;
+	height: 96px;
+	width: 96px;
+	display: block;
+	margin: auto;
+	margin-top: 300px;
+}
+.msg1{
+	margin-top: 16px;
+	margin-left: 230px;
+	flex: 0 0 auto;
+	justify-content: flex-start;
+	align-content: stretch;
+	display: flex;
+	border: 0 solid #000;
+}
+.msg1_h2{
+	text-align: center;
+	display: block;
+	color: black;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+	margin: -4px 0 -5px;
+	position: relative;
+}
+.msg2{
+	margin-top: 16px;
+	margin-left: 90px;
+	flex: 0 0 auto;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+	display: flex;
+	position: relative;
+}
+.msg2_div{
+	text-align: center;
+	display: block;
+	font-weight: 400;
+	line-height: 18px;
+	margin: -3px 0 -4px;
+	position: relative;
+	padding: 0;
+	color: rgba(var(--f52,142,142,142),1);
+}
+.sendwrap{
+	 margin-top: 24px;
+	 margin-left: 225px;
+	 display: flex;
+	 align-items: center;
+	 align-content: stretch;
+	 position: relative;
+}
+.sendmsg{
+	padding-bottom: 4px;
+	padding-top: 4px;
+	box-sizing: border-box;
+}
+.sendmsg_btn{
+	background-color: rgba(var(--d69,0,149,246),1);
+	border: 1px solid transparent;
+	border-radius: 4px;
+	color: rgba(var(--eca,255,255,255),1);
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 5px 9px;
+	text-align: center;
+	width: auto;
+}
+
+/* 본문 끝 */
+/* 
+	svg : 2차원 벡터 그래픽의 표현을 위한 XML 마크업 언어
+		- aria-label : 화면에 현재 요소를 설명할 텍스트가 없을 경우에 담는 설명용 텍스트
+		- viewBox : 
+		- role : 
+		
+	path : svg의 소자 형상을 정의하는 일반적인 요소. 모든 기본 도형은 경로 요소로 만들 수 있다
+		- d : 경로의 모양을 정의
+		- stroke : 
+		- stroke-linejoin : 
+		- fill-rule : 
+	
+	line : 선을 만드는데 사용
+		- x1 : 선의 x축 시작 부분을 정의
+		- x2 : 선의 x축 끝 부분을 정의
+		- y1 : 선의 y축 시작 부분을 정의
+		- y2 : 선의 y축 끝 부분을 정의
+	
+	polygon : 연결된 직선 세그먼트의 세트로 이루어지는 닫힌 도형을 정의 (마지막 점은 첫 번째 점에 연결)
+		- tabidnex : Tab 키를 사용하는 연속적인 키보드 탐색에서 어느 순서에 위치할지 지정
+	
+	circle : svg 요소는 인 svg 기본 형상 중심점과 반경에 기초하여 원을 그리는데 사용
+ */

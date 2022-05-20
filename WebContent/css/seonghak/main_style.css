@@ -1,0 +1,1320 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'YdestreetB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/YdestreetB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+textarea {
+	font-family: 'SUIT-Medium';
+}
+textarea:focus {
+	outline: none;
+}
+textarea::placeholder {
+	color: #bdbdbd;
+}
+input:focus {
+	outline: none;
+}
+.displayNone {
+	display: none;
+}
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid #DBDBDB;
+	background-color: white;
+	z-index: 100;
+}
+
+#nav_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 1000px;
+	height: 60px;
+}
+
+#logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	float: left;
+	width: 350px;
+	height: 60px;
+}
+
+#search {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	float: left;
+	width: 300px;
+	height: 60px;
+}
+
+#search > form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	width: 300px;
+	height: 60px;
+}
+
+#icons {
+	position: relative;
+	float: left;
+	width: 350px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+
+#logo-container {
+	width: 105px;
+	height: 40px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position-y: center;
+}
+
+#logo-container:hover {
+	cursor: pointer;
+}
+
+#search input {
+	width: 270px;
+	height: 35px;
+	border: none;
+	border-radius: 7px;
+	padding-left: 10px;
+	font-size: 16px;
+	background-color: #eeeeee;
+}
+
+#search input::placeholder {
+	color: #9e9e9e;
+}
+
+#search input:focus {
+	outline: none;
+}
+
+#search-icon {
+	position: absolute;
+	left: 10px;
+	color: #9e9e9e;
+}
+
+#cancel-icon {
+	position: absolute;
+	left: 260px;
+	color: #9e9e9e;
+}
+
+#cancel-icon:hover {
+	cursor: pointer;
+}
+
+.icon-class {
+	width: 25px;
+	height: 25px;
+	margin-right: 20px;
+}
+
+.icon-class:hover {
+	cursor: pointer;
+}
+
+#home-icon, #dm-icon, #upload-icon, #compass-icon, #alert-icon,
+	#profile-icon {
+	background-size: cover;
+}
+
+#profile-icon {
+	background-position: center;
+	border-radius: 50%;
+}
+.profile-bubble {
+	position: absolute;
+	left: 202.5px;
+    top: 54.5px;
+    width: 230px;
+    height: 200px;
+	background: white;
+	border-radius: .4em;
+	filter: drop-shadow(0 0 3px #bdbdbd);
+}
+
+.profile-bubble > div:hover {
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+
+.profile-bubble:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 13px solid transparent;
+	border-bottom-color: white;
+	border-top: 0;
+	margin-left: -13px;
+	margin-top: -13px;
+}
+/* 상단 메뉴바 아래 영역*/
+
+/* 전체 wrapper */
+#main-wrap {
+	margin-top: 60px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(250, 250, 250, 1);
+}
+/* 가운데 정렬하기 위한 wrapper */
+#main-wrap2 {
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+/* 왼쪽(스토리 공간, 시작하기 공간, 게시물 공간) */
+#content-area {
+	display: inline-block;
+	width: 650px;
+	position: relative;
+}
+/* 오른쪽(프로필, 회원님을 위한 추천) */
+#aside-area {
+	display: inline-block;
+	position: fixed;
+	top: 100px;
+	width: 350px;
+	height: 930px;
+}
+/*---------------------------------------- 스토리 구역 */
+#story-area {
+	display: flex;
+	align-items: center;
+	width: 650px;
+	height: 110px;
+	overflow: scroll;
+	scroll-behavior: smooth;
+	background-color: white;
+	border: 1px solid #e0e0e0;
+}
+
+#story-area::-webkit-scrollbar {
+	display: none;
+}
+
+.profile-wrap {
+	float: left;
+	margin-left: 10px;
+	width: 75px;
+	height: 85px;
+}
+
+.profile-wrap:hover {
+	cursor: pointer;
+}
+
+.profile-img-outcircle {
+	display: flex;
+	width: 75px;
+	height: 70px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	background-image: linear-gradient(#fff, #fff),
+		linear-gradient(to bottom left, #e040fb 0%, #ffca28 100%);
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	box-sizing: border-box;
+}
+
+.profile-img-incircle {
+	margin: auto;
+	width: 65px;
+	height: 60px;
+	border-radius: 50%;
+	background-position: center;
+	background-size: cover;
+}
+
+.profile-name {
+	width: 75px;
+	height: 15px;
+	font-size: 11px;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	letter-spacing: 0.3px;
+}
+
+#left-btn {
+	position: absolute;
+	left: 5px;
+	top: 40px;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	display: none;
+	border-radius: 50%;
+	background-image:
+		url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-512.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#right-btn {
+	position: absolute;
+	left: 625px;
+	top: 40px;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+	background-image:
+		url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-512.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#left-btn:hover, #right-btn:hover {
+	cursor: pointer;
+}
+/*---------------------------------------- 스토리 구역 */
+
+/*---------------------------------------- 시작하기 구역 */
+/* 시작하기 전체를 감싸는 wrapper */
+#start-list-wrap {
+	display: flex;
+	align-items: center;
+	width: 650px;
+	height: 250px;
+	overflow: scroll;
+	scroll-behavior: smooth;
+	margin-top: 10px;
+}
+
+#start-list-wrap::-webkit-scrollbar {
+	display: none;
+}
+/* 시작하기 안쪽에 item 하나 전체를 감싸는 wrapper */
+.start-wrap {
+	background-color: white;
+	flex-shrink: 0;
+	float: left;
+	margin-left: 10px;
+	width: 250px;
+	height: 235px;
+	border: 1px solid #e0e0e0;
+}
+/* item에 사진을 감싸는 wrapper(facebook사진, 전화사진, 카메라 사진) */
+.start-img-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 250px;
+	height: 70px;
+}
+/* facebook친구 찾기, 전화번호 추가, 프로필 사진 추가 를 감싸는 wrapper */
+.start-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 250px;
+	height: 40px;
+	font-weight: bold;
+}
+/* 설명을 감싸는 wrapper */
+.start-explanation {
+	width: 250px;
+	height: 65px;
+	font-size: 14px;
+	padding-left: 15px;
+	padding-right: 15px;
+	text-align: center;
+	box-sizing: border-box;
+	color: #9e9e9e;
+}
+/* facebook에 연결, 전화번호 추가, 프로필 사진 추가 버튼을 감싸는 wrapper */
+.start-btn-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 250px;
+	height: 60px;
+}
+/* 각 이미지들 */
+#facebook-img {
+	width: 30px;
+	height: 30px;
+	background-image:
+		url("https://cdn3.iconfinder.com/data/icons/remixicon-logos/24/facebook-circle-line-256.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#call-img {
+	width: 30px;
+	height: 30px;
+	background-image:
+		url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-telephone-outline-256.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#camera-img {
+	width: 30px;
+	height: 30px;
+	background-image:
+		url("https://cdn0.iconfinder.com/data/icons/summer-season-9/32/summer_camera-256.png");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/* 각 버튼 */
+.start-btn {
+	padding: 7px 10px;
+	background-color: #2196f3;
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.start-btn:hover {
+	cursor: pointer;
+}
+/* 시작하기 왼쪽, 오른쪽에 있는 화살표 버튼 */
+#start-left-btn {
+	position: absolute;
+	left: 5px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	opacity: 0.5;
+	background-color: black;
+	background-image:
+		url("https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-13-256.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#start-right-btn {
+	position: absolute;
+	left: 620px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	opacity: 0.5;
+	background-color: black;
+	background-image:
+		url("https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-14-256.png");
+	background-size: cover;
+	background-position: center;
+}
+
+#start-left-btn:hover, #start-right-btn:hover {
+	cursor: pointer;
+}
+
+#white-blur {
+	position: absolute;
+	width: 20px;
+	height: 250px;
+	left: 630px;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 10%,
+		rgba(255, 255, 255, 0.25) 25%, rgba(255, 255, 255, 0.5) 50%,
+		rgba(255, 255, 255, 0.75) 75%, rgba(255, 255, 255, 1) 100%);
+}
+/* 게시물 css */
+/* 게시물 하나 전체를 감싸는 wrapper */
+.content-layout {
+	width: 650px;
+	border: 1px solid #e0e0e0;
+	margin-top: 20px;
+	background-color: white;
+}
+/* 게시물 상단 게시물 작성자의 프로필 사진, 이름 더보기 버튼을 감싸는 wrapper */
+.user-info-wrap {
+	width: 650px;
+	height: 60px;
+}
+/* 작성자 프로필 사진, 이름 감싸는 wrapper */
+.user-profile-wrap {
+	float: left;
+	width: 600px;
+	height: 60px;
+}
+/* 더보기 버튼 wrapper */
+.more-btn-wrap {
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 48px;
+	height: 60px;
+}
+
+.more-btn {
+	width: 30px;
+	height: 30px;
+	background-image:
+		url('https://cdn1.iconfinder.com/data/icons/glyph-user-interface/512/Glyph_User_Interface_UI-11-512.png');
+	background-size: cover;
+	background-position: center;
+}
+.more-btn:hover {
+	cursor: pointer;
+}
+/* 프로필 사진 감싸는 wrapper */
+.user-profile-img-wrap {
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+}
+/* 작성자 프로필 사진 */
+.user-profile-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+}
+.user-profile-img:hover {
+	cursor: pointer;
+}
+/* 작성자 이름 */
+.user-profile-name {
+	margin-left: 10px;
+	float: left;
+	height: 60px;
+	line-height: 60px;
+	font-size: 13px;
+}
+.user-profile-name > a {
+	color: black;
+	font-size: 13px;
+}
+.user-profile-name:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+/* 게시물 이미지를 감싸는 wrapper */
+.content-image-wrap {
+	width: 650px;
+	position: relative;
+}
+/* 이미지 여러개일경우 좌우 이동 버튼 */
+.image-left-btn, .image-right-btn {
+	position: absolute;
+	top: 50%;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	opacity: 0.5;
+	background-color: white;
+	background-size: cover;
+	background-position: center;
+}
+
+.image-left-btn {
+	background-image:
+		url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-512.png");
+}
+
+.image-right-btn {
+	background-image:
+		url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-512.png");
+	left: 620px;
+}
+
+.image-left-btn:hover, .image-right-btn:hover {
+	cursor: pointer;
+}
+/* 댓글 영역 아이콘들 감싸는 wrapper */
+.reply-area-icons-wrap {
+	width: 650px;
+	height: 50px;
+}
+/* 댓글 영역 아이콘들 중 왼쪽 부분 감싸는 wrapper */
+.reply-area-icons-left-wrap {
+	display: flex;
+	align-items: center;
+	float: left;
+	width: 600px;
+	height: 50px;
+}
+/* 댓글 영역 아이콘들 중 오른쪽 부분 감싸는 wrapper */
+.reply-area-icons-right-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	width: 47px;
+	height: 50px;
+}
+/* 아이콘 크기 */
+.bookmark-icon, .heart-icon, .bubble-icon, .dm-icon {
+	width: 25px;
+	height: 25px;
+	background-size: cover;
+}
+
+.heart-icon, .bubble-icon, .dm-icon {
+	margin-left: 10px;
+}
+
+.bookmark-icon:hover, .heart-icon:hover, .bubble-icon:hover, .dm-icon:hover
+	{
+	opacity: 0.5;
+	cursor: pointer;
+}
+/* 좋아요 개수 나타내는 wrapper */
+.reply-area-like-wrap {
+	width: 500px;
+	height: 30px;
+	padding-left: 10px;
+	line-height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.reply-area-user-name-and-comment-wrap, .reply-area-reply-count-wrap,
+	.reply-area-reply-content-wrap, .content-posting-time {
+	width: 650px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+.reply-area-reply-count-wrap {
+	color: #9e9e9e;
+}
+.reply-area-reply-count-wrap:hover {
+	cursor: pointer;
+}
+.reply-area-reply-count-wrap, .reply-area-reply-content-wrap {
+	margin-top: 3px;
+}
+
+.my-reply-wrap {
+	display: flex; flex-direction: column; justify-content: center; padding: 5px 15px; width: 650px; box-sizing: border-box;
+}
+.my-reply-wrap span {
+	font-size: 14px; display: inline-block; margin-top: 5px;
+}
+.my-reply-wrap a {
+	color: black; font-size: 14px; font-weight: bold;
+}
+
+.content-posting-time {
+	padding-top: 5px;
+	padding-bottom: 15px;
+	font-size: 11px;
+	color: #9e9e9e;
+}
+
+.reply-write-wrap {
+	width: 650px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.reply-write-wrap>form {
+	width: 650px;
+	height: 40px;
+}
+
+.reply-textarea {
+	float: left;
+	width: 590px;
+	height: 40px;
+	box-sizing: border-box;
+	resize: none;
+	padding-left: 10px;
+	border: none;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.reply-textarea:focus {
+	outline: none;
+}
+
+.reply-textarea::placeholder {
+	color: #bdbdbd;
+}
+
+.reply-write-btn {
+	float: left;
+	width: 60px;
+	height: 40px;
+	box-sizing: border-box;
+	background-color: transparent;
+	font-size: 14px;
+	color: #2196f3;
+	font-weight: bold;
+	border: none;
+}
+
+.reply-write-btn:hover {
+	cursor: pointer;
+}
+.left-user-recommand-area-wrap {
+	margin-top: 10px;
+	width: 650px;
+	height: 280px;
+	border: 1px solid #e0e0e0;
+	background-color: white;
+}
+.left-user-recommand-top-wrap {
+	position: absolute;
+	width: 650px;
+	height: 40px;
+}
+.left-user-recommand-top-left-wrap {
+	display: flex;
+	align-items: flex-end;
+	padding-left: 25px;
+	width: 550px;
+	height: 40px;
+	color: #9e9e9e;
+	font-size: 14px;
+	font-weight: bold;
+	box-sizing: border-box;
+	float:left;
+}
+.left-user-recommand-top-right-wrap {
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	padding-right: 25px;
+	width: 100px;
+	height: 40px;
+	box-sizing: border-box;
+	float: left;
+}
+.left-user-recommand-top-right-wrap > a {
+	text-decoration: none;
+	color: #2196f3;
+	font-size: 14px;
+	font-weight: bold;
+}
+.left-user-recommand-bottom-wrap {
+	display: flex;
+	align-items: center;
+	margin-top: 40px;
+	width: 650px;
+	height: 240px;
+	overflow: scroll;
+	scroll-behavior: smooth;
+}
+.left-user-recommand-bottom-wrap::-webkit-scrollbar {
+	display: none;
+}
+#left-user-recommand-left-btn, #left-user-recommand-right-btn {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	opacity: 0.5;
+	border-radius: 50%;
+}
+#left-user-recommand-left-btn {
+	background-image:
+		url("https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-13-256.png");
+	z-index: 1;
+}
+#left-user-recommand-right-btn {
+	background-image:
+		url("https://cdn3.iconfinder.com/data/icons/essential-rounded/66/Rounded-14-256.png");
+	left: 630px;
+	z-index: 1;
+}
+#left-user-recommand-left-btn:hover, #left-user-recommand-right-btn:hover {
+	cursor: pointer;
+}
+.left-user-recommand-profile-wrap {
+	position: relative;
+	flex-shrink: 0;
+	width: 175px;
+	height: 200px;
+	border: 1px solid #e0e0e0;
+	margin-left: 20px;
+}
+.remove-recommand-btn {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 150px;
+	top: 8px;
+	background-image: 
+		url('https://cdn3.iconfinder.com/data/icons/user-interface-169/32/cross-256.png');
+	background-size: cover;
+}
+.remove-recommand-btn:hover {
+	cursor: pointer;
+}
+.left-user-recommand-profile-image-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 175px;
+	height: 100px;
+}
+.left-user-recommand-profile-image-wrap > div {
+	width: 55px;
+	height: 55px;
+	border: 1px solid #e0e0e0;
+	border-radius: 50%;
+	background-size: cover;
+}
+.left-user-recommand-profile-name-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 175px;
+	height: 50px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.left-user-recommand-profile-name-wrap > a {
+	color: black;
+}
+.left-user-recommand-profile-follow-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 175px;
+	height: 50px;
+}
+.left-user-recommand-profile-follow-wrap > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 120px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: #2196f3;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+.left-user-recommand-profile-follow-wrap > div:hover {
+	cursor: pointer;
+}
+.aside-user-profile-wrap {
+	width: 350px;
+	height: 60px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.aside-user-profile-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	padding-left: 20px;
+	width: 85px;
+	height: 60px;
+	margin-right: 15px;
+	box-sizing: border-box;
+}
+.aside-user-profile-image > div {
+	width: 55px;
+	height: 55px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+}
+.aside-user-profile-image > div:hover {
+	cursor:pointer;
+}
+.aside-user-profile-name {
+	display: flex;
+	align-items: center;
+	float: left;
+	width: 180px;
+	height: 60px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.aside-user-change {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: left;
+	width: 65px;
+	height: 60px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2196f3;
+}
+.aside-user-profile-name > a {
+	color: black;
+}
+.aside-user-change > a {
+	color: #2196f3;
+}
+.aside-area-recommand-text-wrap {
+	width: 350px;
+	height: 20px;
+	margin-top: 12px;
+}
+.aside-area-recommand-text-wrap > div:nth-child(1) {
+	width: 290px;
+	height: 20px;
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	color: #9e9e9e;
+	font-weight: bold;
+}
+.aside-area-recommand-text-wrap > div:nth-child(2) {
+	width: 60px;
+	height: 20px;
+	float: left;
+	font-size: 12px;
+	line-height: 20px;
+}
+.aside-area-recommand-text-wrap > div:nth-child(2) > a {
+	color: black;
+	font-weight: bold;
+}
+.aside-area-user-recommand-wrap {
+	width: 350px;
+	height: 60px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+.aside-area-user-recommand-image {
+	float: left;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+.aside-area-user-recommand-image > div {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-size: cover;
+}
+.aside-area-user-recommand-image > div:hover {
+	cursor: pointer;
+}
+.aside-area-user-recommand-name {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	float: left;
+	width: 190px;
+	height: 40px;
+	margin-right: 5px;
+}
+.aside-area-user-recommand-name > a {
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	color: black;
+	font-weight: 500;
+}
+.aside-area-user-follow-btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	float: left;
+	width: 50px;
+	height: 40px;
+}
+.aside-area-user-follow-btn > div {
+	font-size: 12px;
+	color: #2196f3;
+	font-weight: bold;
+}
+.aside-area-user-follow-btn > div:hover {
+	cursor: pointer;
+}
+.aside-area-footer-wrap {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	width: 330px;
+	height: 40px;
+	margin-top: 10px;
+	color: #bdbdbd;
+	font-size: 11px;
+}
+.aside-area-footer-wrap > div {
+	line-height: 1.6;
+}
+.aside-area-footer-wrap > div > a {
+	color: #bdbdbd;
+	font-size: 11px;
+	letter-spacing: 0.5px;
+}
+.copyright {
+	margin-top: 10px;
+	font-size: 11px;
+	color: #bdbdbd;
+	padding-left: 20px;
+}
+
+
+#popup-background-wrap {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	display: none;
+	transform: translate(-50%,-50%);
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 200;
+}
+#popup-window {
+	position: absolute;
+	width: 1300px;
+	height: 830px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+}
+.stop-scroll{
+  height: 100%;
+  overflow: hidden;
+}
+#popup-remove-btn-wrap {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 25px;
+	height: 25px;
+	background-size: cover;
+	border-radius: 50%;
+}
+#popup-remove-btn-wrap:hover {
+	cursor: pointer;
+}
+.popup-window-left-wrap, .popup-window-right-wrap {
+	height: 830px;
+	float: left;
+	box-sizing: border-box;
+}
+.popup-window-left-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	width: 800px;
+}
+.popup-window-right-wrap {
+	width: 500px;
+	height: 830px;
+}
+.popup-window-left-wrap > img {
+	width: 800px;
+	height: 830px;
+	object-fit: contain;
+}
+#popup-image-move-left-btn, #popup-image-move-right-btn {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	background-color: white;
+	opacity: 0.7;
+	border-radius: 50%;
+}
+#popup-image-move-left-btn {
+	background-image:
+		url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-left-512.png");
+}
+#popup-image-move-right-btn {
+	left: 780px;
+	background-image:
+		url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-right-512.png");
+}
+#popup-image-move-left-btn:hover, #popup-image-move-right-btn:hover {
+	cursor: pointer;
+}
+.popup-content-writer-profile-wrap {
+	position: fixed; width: 500px; height: 60px; border-bottom: 1px solid #e0e0e0; background-color: white;
+}
+.popup-content-writer-profile-image-wrap {
+	display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; float: left;
+}
+.popup-content-writer-profile-image {
+	width: 40px; height: 40px; border: 1px solid #e0e0e0; border-radius: 50%; background-size: cover; background-position: center;
+}
+.popup-content-writer-profile-image:hover {
+	cursor: pointer;
+}
+.popup-content-writer-profile-name-wrap {
+	display: flex; align-items: center; padding-left: 5px; width: 380px; height: 60px; float: left; box-sizing: border-box;
+}
+.popup-content-writer-profile-name-wrap > a {
+	color: black; font-size: 14px; font-weight: 500;
+}
+.popup-content-writer-more-btn-wrap {
+	display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; float: left;
+}
+.popup-content-writer-more-btn-wrap > div {
+	width: 25px; height: 25px; background-size: cover;
+	background-image:
+		url('https://cdn1.iconfinder.com/data/icons/glyph-user-interface/512/Glyph_User_Interface_UI-11-512.png');
+}
+.popup-content-writer-more-btn-wrap > div:hover {
+	cursor: pointer;
+}
+.popup-window-right-reply-wrap {
+	margin-top: 61px; width: 500px; height: 619px; overflow: scroll;
+}
+.popup-window-right-reply-wrap::-webkit-scrollbar {
+	display: none;
+}
+.popup-content-writer-posting-wrap {
+	display: flex; align-items: flex-start; width: 500px; box-sizing: border-box; padding-top: 15px;
+}
+.popup-posting-profile-img-wrap {
+	display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; box-sizing: border-box;
+}
+.popup-posting-profile-img {
+	width: 30px; height: 30px; border-radius: 50%; background-size: cover; background-position: center;
+}
+.popup-posting-profile-img:hover {
+	cursor: pointer;
+}
+.popup-posting-content-wrap {
+	display: inline-block; width: 450px; min-height: 50px; box-sizing: border-box; padding-right: 30px;
+}
+.popup-content-reply-wrap {
+	display: flex; align-items: flex-start; width: 500px; box-sizing: border-box; padding-top: 15px;
+}
+.popup-content-reply-profile-img-wrap {
+	display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; box-sizing: border-box;
+}
+.popup-content-reply-profile-img {
+	width: 35px; height: 35px; border-radius: 50%; background-size: cover;
+}
+.popup-content-reply-profile-img:hover {
+	cursor: pointer;
+}
+.popup-content-reply-content-wrap {
+	width: 410px; padding-left: 10px; min-height: 50px; padding-top: 10px; box-sizing: border-box;
+}
+.popup-content-reply-content-wrap > div:nth-child(3) {
+	display: inline-block; color: #9e9e9e; font-size: 13px; padding-top: 10px;
+}
+.popup-content-reply-content-wrap > div:nth-child(3):hover {
+	cursor: pointer;
+}
+.popup-content-reply-info-wrap {
+	width: 400px; height: 20px; margin-top: 15px; font-size: 12px; color: #9e9e9e;
+}
+.popup-content-reply-info-wrap > div:nth-child(1) {
+	float: left; height: 20px; padding-right: 15px;
+}
+.popup-content-reply-info-wrap > div:nth-child(2), .popup-content-reply-info-wrap > div:nth-child(3), .popup-content-reply-info-wrap > div:nth-child(4) {
+	float: left; height: 20px; margin-right: 15px; font-weight: bold;
+}
+.popup-content-reply-info-wrap > div:nth-child(2):hover, .popup-content-reply-info-wrap > div:nth-child(3):hover, .popup-content-reply-info-wrap > div:nth-child(4):hover {
+	cursor: pointer;
+}
+.reply-reply-wrap {
+	align-items: flex-start; width: 400px; box-sizing: border-box; padding-top: 15px; display: none;
+}
+.reply-reply-content-wrap {
+	width: 310px; padding-left: 10px; min-height: 50px; padding-top: 10px; box-sizing: border-box;
+}
+.reply-heart-wrap {
+	display: flex; align-items: center; justify-content: center; width: 28px; height: 50px;
+}
+.reply-heart-wrap > div {
+	width: 15px; height: 15px; background-position: center; background-size: cover;
+}
+.reply-heart-wrap > div:hover {
+	cursor: pointer;
+}
+.popup-right-bottom-wrap {
+	width: 500px; height: 150px; border-top: 1px solid #e0e0e0; box-sizing: border-box; position: fixed; bottom:0; background-color: white;
+}
+.popup-right-bottom-top-wrap {
+	width: 500px; height: 100px; box-sizing: border-box;
+}
+.popup-right-bottom-top-left-wrap {
+	width: 450px; height: 100px; padding-top: 10px; box-sizing: border-box; float: left;
+}
+.popup-right-bottom-top-left-icons-wrap {
+	width: 400px; height: 40px;
+}
+.popup-right-bottom-top-left-icons-wrap > div {
+	display: flex; justify-content: flex-end; width: 40px; height: 40px; float: left;
+}
+.popup-right-bottom-top-left-icons-wrap > div > div {
+	width: 25px; height: 25px; background-size: cover;
+}
+.popup-right-bottom-top-left-icons-wrap > div > div:hover {
+	cursor: pointer; opacity: 0.5;
+}
+.popup-right-bottom-top-left-wrap > div:nth-child(2) {
+	padding-left: 15px; width: 380px; height: 30px; font-size: 13px; font-weight: bold;
+}
+.popup-right-bottom-top-left-wrap > div:nth-child(2):hover {
+	cursor: pointer;
+}
+.popup-right-bottom-top-left-wrap > div:nth-child(3) {
+	padding-left: 15px; width: 380px; height: 20px; font-size: 10px; font-weight: bold; color: #9e9e9e;
+}
+.popup-right-bottom-top-left-wrap > div:nth-child(3):hover {
+	cursor: pointer;
+}
+.popup-right-bottom-top-wrap > div:nth-child(2) {
+	display: flex; justify-content: center; width: 48px; height: 100px; padding-top: 10px; box-sizing: border-box; float: left;
+}
+.popup-right-bottom-top-wrap > div:nth-child(2) > div {
+	width: 25px; height: 25px; background-size: cover;
+}
+.popup-right-bottom-top-wrap > div:nth-child(2) > div:hover {
+	cursor: pointer; opacity: 0.5;
+}
+.popup-right-bottom-wrap > div:nth-child(2) {
+	width: 500px; height: 50px;
+}
+.popup-right-bottom-wrap > div:nth-child(2) > form {
+	display: flex;width: 500px; height: 50px; box-sizing: border-box;
+}
+.popup-right-bottom-wrap > div:nth-child(2) > form > textarea {
+	border: none; width: 450px; height: 50px; padding: 15px; box-sizing: border-box; resize: none; font-size: 14px; font-weight: bold;
+}
+.popup-right-bottom-wrap > div:nth-child(2) > form > input[type=button] {
+	width: 50px; height: 50px; border:none; border-bottom: 0; background-color: transparent; color: #2196f3; font-size: 14px; font-weight: bold;
+}
+.popup-right-bottom-wrap > div:nth-child(2) > form > input[type=button]:hover {
+	cursor: pointer;
+}
+
+.popup-more-wrap {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 300;
+}
+.popup-more-wrap > div {
+	position: absolute;
+	width: 400px;
+	height: 350px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	border-radius: 10px;
+}
+.popup-more-wrap > div > div:hover {
+	cursor: pointer;
+}
+
+.popup-more-wrap2, .ask-remove-board-wrap {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 300;
+}
+.popup-more-wrap2 > div, .ask-remove-board-wrap > div {
+	position: absolute;
+	width: 400px;
+	height: 200px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	background-color: white;
+	border-radius: 10px;
+}
+.popup-more-wrap2 > div > div:hover, .ask-remove-board-wrap > div > div:hover {
+	cursor: pointer;
+}
+#remove-board-btn, #real-remove-board-btn {
+	width: 400px; height: 50px; text-align: center; line-height: 50px; border-bottom: 1px solid #e0e0e0; box-sizing: border-box; font-size: 14px; color: red; font-weight: bold;
+}
+
+.follow-cancel-wrap {
+	position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 10;
+}
+.follow-cancel-wrap > div {
+	position: absolute; width: 400px; height: 300px; border-radius: 10px; left: 50%; top: 50%; transform: translate(-50%,-50%); background-color: white;
+}
+.follow-cancel-wrap > div > div:nth-child(2) {
+	display: flex; align-items: center; justify-content: center; width: 400px; height: 50px;
+	border-bottom: 1px solid #e0e0e0; box-sizing: border-box; color: red; font-size: 14px; font-weight: bold;
+}
+.follow-cancel-wrap > div > div:nth-child(2):hover {
+	cursor: pointer;
+}
+.follow-cancel-wrap > div > div:nth-child(3) {
+	display: flex; align-items: center; justify-content: center; width: 400px; height: 50px; box-sizing: border-box; font-size: 14px;
+}
+.follow-cancel-wrap > div > div:nth-child(3):hover {
+	cursor: pointer;
+}
+.follow-info-wrap {
+	width: 400px; height: 200px; border-bottom: 1px solid #e0e0e0; box-sizing: border-box;
+}
+.follow-info-wrap > div:nth-child(1) {
+	display: flex; align-items: center; justify-content: center; width: 400px; height: 140px; box-sizing: border-box;
+}
+.follow-info-img {
+	width: 90px; height: 90px; border-radius: 50%; background-size: cover; background-repeat: no-repeat;
+}
+.follow-info-wrap > div:nth-child(2) {
+	display: flex; align-items: center; justify-content: center; width: 400px; height: 60px; box-sizing: border-box; font-size: 14px;
+}

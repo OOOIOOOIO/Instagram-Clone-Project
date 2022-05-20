@@ -1,0 +1,434 @@
+@charset "UTF-8";
+
+nav {
+	width: 100%;
+	height: 59px;
+	position: fixed;
+	background-color: white;
+	border-bottom: 1px solid #DBDBDB;
+	top: 0px;
+}
+
+.header {
+	width: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.search {
+	width: 267px;
+	height: 36px;
+	padding: 7px;
+	font-size: 17px;
+	border-radius: 7px;
+	background-image:
+		url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACI0lEQVRIie2Uv2sTcRjGP+/lKqZNLUVrp2wq/mhBJxddWnF0SOsVEhpwKEUCgv9A5zgLocGtUq+cQZCMWg/r5FAQWkFXaatEEfxRhFzu+zqkwZL2rqeufZY7eO95Pt/vA/fCoQ6QRA08z0sHoc4IMqlwDugHNgVZVqPVQsFZ/WeA69YuG8xjIBvhU5DKz+9f787OzgZxACsi3AeyCq8Vcq2mfWJwIHNU1BpRpQz8Ai31Hxt8pKqRLey5QbsW3gNZFa0esaTkOE7YbVpc9C5i8Rw4LiqlfP5mJdENglBnOiePCgcoFJw3onoLQEXnfN+3EwEEmdx5vRcV3lE+P1VHWAOGtxqNq4kACucBwqa9Ehf+xyArO88LiQBAH4Ax37YT5av+ABDIJAVsAaTS6VNJACKcaYPYTAYQfQFgGatwULjneUPAdcCEKV4mA4QyD6gId1y3dinKpKoShNynXU296DgfEgHav79UgF6DefbQ9W7sd/LFpdoSMAWgYspR4bDPqqhWqz2ZgUEXZWLnizVUVkTMNiqntV1L3y7L2zCwx4rFXCMRANoVuG7ttorOAcNdYwPUVUzZUuuBwkgcJHaP+L5vb3z6ciWljKqYXsTaCC191el8YeHJSbuntawwIrDeCuzxbkgsIIk8zxsKDMsoo8A700qNTU9PfOzM92zTv5XjOJ/Dpn1NYB04a9nh093z/wYAFIu5RiuwxxFWgdgddqg9+g0TJuLzCuoJngAAAABJRU5ErkJggg==");
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: 5% center;
+	text-indent: 13%;
+	border: none;
+	background-color: #eeeeee;
+	margin-left: 80px;
+	margin-top: -6px;
+}
+
+.search2 {
+	width: 333px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.insta_logo {
+	width: 290px;
+	margin-left: 12px;
+}
+
+.insta_menu {
+	width: 333px;
+	margin-left: 73px;
+	margin-right: 10px;
+}
+
+.insta_menu a {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.wrap {
+	width: 930px;
+	height: 760px;
+	border: 1px solid #DBDBDB;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 90px;
+}
+
+.list {
+	position: absolute;
+	border-right: 1px solid #DBDBDB;
+	border-bottom: 1px solid #DBDBDB;
+	width: 230px;
+	height: 590px;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+		margin-bottom: 31px;
+	margin-left: -10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.change {
+	font-size: 0.9em;
+	color: dodgerblue;
+	font-weight: bold;
+}
+
+.set {
+	position: absolute;
+	width: 230px;
+	height: 169px;
+	border-right: 1px solid #DBDBDB;
+	bottom: 0;
+}
+
+.set img {
+	margin: 20px 20px;
+}
+
+.center {
+	color: dodgerblue;
+	margin: -20px 20px;
+}
+
+.set div {
+	position: absolute;
+	width: 80%;
+	font-size: 12px;
+	color: gray;
+	margin-top: 30px;
+	margin-left: 20px;
+}
+
+.main {
+	position: absolute;
+	width: 699px;
+	height: 760px;
+	right: 0;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.change:link {
+	text-decoration: none;
+	color: dodgerblue;
+}
+
+.change:visited {S
+	text-decoration: none;
+	color: dodgerblue;
+}
+
+.change:active {
+	text-decoration: none;
+	color: dodgerblue;
+}
+
+.change:hover {
+	text-decoration: none;
+	color: dodgerblue;
+}
+
+.current, current:visited, current:hover, current:active {
+	color: #262626;
+	color: rgba(var(- -i1d, 38, 38, 38), 1);
+	border-left: 2px;
+	display: block;
+	font-size: 16px;
+	height: inherit;
+	line-height: 10px;
+	padding: 16px 16px 16px 0px;
+	width: calc(100% - 48px);
+}
+
+.look {
+	border-left-color: #262626;
+	border-left-color: rgba(var(- -f75, 38, 38, 38), 1);
+	border-left-width: 2px;
+	font-weight: 600;
+}
+
+button, input, textarea {
+	color: #262626;
+	color: rgba(var(- -i1d, 38, 38, 38), 1);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+button {
+	margin: 0;
+}
+
+.picture {
+	border: 0;
+	cursor: pointer;
+	height: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+.cngPicture {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.cover {
+	height: 38px;
+	width: 38px;
+	margin: 22px 32px 0 124px;
+	float: left;
+}
+
+.picturecover {
+	background-color: rgba(var(- -b3f, 250, 250, 250), 1);
+	border-radius: 50%;
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.profile {
+	display: none !important;
+}
+
+.accName {
+	margin-top: 10px;
+	margin-right: 20px;
+	overflow-x: hidden;
+	width: 450px;
+	float: left;
+}
+
+.name {
+	font-size: 24px;
+	line-height: 22px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: 400;
+}
+
+label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.label {
+	height: 38px;
+	width: 110px;
+	margin: 22px 0 0 50px;
+	text-align: right;
+	font-weight: 600;
+}
+
+.oldPw {
+	flex-direction: row;
+	justify-content: flex-start;
+	margin-bottom: 16px;
+	margin-right: 22px;
+	float: left;
+}
+
+.pw_input {
+	background: #fafafa;
+	border: 1px solid #dbdbdb;
+	border: 4px 12px 4px 12px;
+	border-radius: 6px;
+	box-sizing: border-box;
+	color: #262626;
+	color: rgba(var(- -i1d, 38, 38, 38), 1);
+	flex: 0 1 355px;
+	font-size: 14px;
+	height: 40px;
+	padding: 4px 12px 4px 12px;
+	width: 416px;
+}
+
+.input_box {
+	flex-basis: 355px;
+	flex-direction: row;
+	padding-right: 60px;
+	float: left;
+}
+
+.old_pw {
+	margin-top: 16px;
+	flex: 0 0 auto;
+	align-items: stretch;
+	align-content: stretch;
+	display: inline-block;
+	justify-content: flex-start;
+}
+
+.newPw {
+	position: absolute;
+	text-align: right;
+	margin-top: 170px;
+	margin-left: 75px;
+	font-weight: 600;
+}
+
+.new_pw {
+	margin-left: 184px;
+	margin-top: 16px;
+}
+
+.new_pw_confirm {
+	font-weight: 600;
+	width: 0 auto;
+	margin-top: 20px;
+	margin-left: 35px;
+	float: left;
+	text-align: right;
+}
+
+.textarea {
+	background: 0 0;
+	border: 1px solid #dbdbdb;
+	border: 1px solid rgba(var(- -ca6, 219, 219, 219), 1);
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #262626;
+	color: rgba(var(- -i1d, 38, 38, 38), 1);
+	flex: 0 1 355px;
+	font-size: 16px;
+	height: 60px;
+	padding: 6px 10px;
+	margin-top: 16px;
+	width: 355px;
+}
+
+.submit {
+	float: left;
+	margin-top: 11px;
+	margin-left: 186px;
+}
+
+.disabled {
+	float: left;
+	margin-top: 11px;
+	margin-left: 127px;
+}
+
+.change_pw_button {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height: 18px;
+    appearance: none;
+    background: 0 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 9px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: inherit;
+    user-select: none;
+    width: auto;
+    border-radius: 4px;
+    color: rgba(var(--eca,255,255,255),1);
+    position: relative;
+    pointer-events: none;
+    border: 1px solid transparent;
+    background-color: rgba(var(--d69,0,149,246),.3);
+    opacity: 1;
+}
+
+.find_pw_button {
+	border: 0;
+	appearance: none;
+	background: 0 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	text-overflow: ellipsis;
+	text-transform: inherit;
+	user-select: none;
+}
+
+footer {
+	text-align: center;
+	font-size: 12px;
+	color: gray;
+	margin-top: 30px;
+}
+
+footer span {
+	margin-left: 7px;
+	margin-right: 7px;
+}
+
+.color:link {
+	text-decoration: none;
+	color: gray;
+}
+
+.color:visited {
+	text-decoration: none;
+	color: gray;
+}
+
+.color:active {
+	text-decoration: none;
+	color: gray;
+}
+
+.color:hover {
+	text-decoration: none;
+	color: gray;
+}

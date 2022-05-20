@@ -1,0 +1,214 @@
+@charset "UTF-8";
+body{
+		margin: 0px;
+		overflow-y: scroll;
+	}
+	nav{
+		width: 100%;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid #DBDBDB;
+	}
+	.header{
+		width: 975px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.header-logo{
+		width: 353.5px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.header-logo img{
+		margin-left: 10px;
+		height: 60px;
+	}
+	.header-search{
+		width: 268px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	.header-search input{
+		width: 265px;
+	    height: 36px;
+	    padding: 7px;
+	    font-size: 17px;
+	    border-radius: 7px;
+	    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACI0lEQVRIie2Uv2sTcRjGP+/lKqZNLUVrp2wq/mhBJxddWnF0SOsVEhpwKEUCgv9A5zgLocGtUq+cQZCMWg/r5FAQWkFXaatEEfxRhFzu+zqkwZL2rqeufZY7eO95Pt/vA/fCoQ6QRA08z0sHoc4IMqlwDugHNgVZVqPVQsFZ/WeA69YuG8xjIBvhU5DKz+9f787OzgZxACsi3AeyCq8Vcq2mfWJwIHNU1BpRpQz8Ai31Hxt8pKqRLey5QbsW3gNZFa0esaTkOE7YbVpc9C5i8Rw4LiqlfP5mJdENglBnOiePCgcoFJw3onoLQEXnfN+3EwEEmdx5vRcV3lE+P1VHWAOGtxqNq4kACucBwqa9Ehf+xyArO88LiQBAH4Ax37YT5av+ABDIJAVsAaTS6VNJACKcaYPYTAYQfQFgGatwULjneUPAdcCEKV4mA4QyD6gId1y3dinKpKoShNynXU296DgfEgHav79UgF6DefbQ9W7sd/LFpdoSMAWgYspR4bDPqqhWqz2ZgUEXZWLnizVUVkTMNiqntV1L3y7L2zCwx4rFXCMRANoVuG7ttorOAcNdYwPUVUzZUuuBwkgcJHaP+L5vb3z6ciWljKqYXsTaCC191el8YeHJSbuntawwIrDeCuzxbkgsIIk8zxsKDMsoo8A700qNTU9PfOzM92zTv5XjOJ/Dpn1NYB04a9nh093z/wYAFIu5RiuwxxFWgdgddqg9+g0TJuLzCuoJngAAAABJRU5ErkJggg==");
+	    background-size: 20px;
+	    background-repeat: no-repeat;
+	    background-position: 5% center;
+	    text-indent: 13%;
+	    border: none;
+	    background-color: #eeeeee;
+	    position: absolute;
+	}
+	input:focus {
+		outline:none;
+	}
+	.header-menu{
+		width: 353.5px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	.header-menu div{
+		margin-right: 12px;
+	}
+	article{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.wrap{
+		width:900px;
+		height:220px;
+		margin-top: 70px;
+		position: relative;
+		border-bottom: 1px solid #DBDBDB;
+	}
+	.profile_img{
+		position: absolute;
+		width: 300px;
+		height:200px;
+	}
+	.profile_detail{
+		position: absolute;
+		width: 400px;
+		height: 200px;
+		margin-left: 300px;
+	}
+	.img_loca{
+		margin-top: -10px;
+		margin-left: -10px;
+	}
+	.user_info{
+		display: flex;
+		align-items: center;
+		margin-top:20px;
+		
+	}
+	.user_info span{
+		font-size: 27px;
+		font-weight: lighter;
+	}
+	.user_info input{
+		width:90px;
+		margin-left: 20px;
+		border: 1px solid #DBDBDB;
+		background-color: white;
+		border-radius: 5px;
+		padding: 5px;
+		font-weight: bold;
+	}
+	.user_info img{
+		margin-left: 10px;
+	}
+	.follow{
+		margin-top: 15px;
+	}
+	.follow a{
+		text-decoration: none;
+		margin-right: 30px;
+	}
+	a{
+		text-decoration: none;
+	}
+	.user_name{
+		margin-top: 15px;
+		font-weight: bold;
+	}
+	.save{
+		width: 900px;
+		margin: 0 auto;
+		margin-top: 20px;
+		text-align: center;
+	}
+	.save span{
+		margin-left: 0px;
+		margin-right: 50px;
+		font-size: 0.8em;
+	}
+	h5{
+		text-align: left;
+	}
+	table{
+		border-spacing: 10px;
+		margin-left: -10px;
+		margin-top: -20px;
+	}
+	td{
+		width: 230px;
+		height: 230px;
+		border: 1px solid #DBDBDB;
+		margin-right: 5px;
+		font-size: 14px;
+		padding: 10px;
+	}
+	.phone, .photo{
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.add input{
+		margin-bottom: -30px;
+		background-color: dodgerblue;
+		border-radius: 5px;
+		padding: 6px;
+		font-weight: bold;
+		color: white;
+		border: 1px solid dodgerblue;
+	}
+	.add_photo{
+		margin-top: 45px;
+	}
+	.add_phone{
+		margin-top: 30px;
+	}
+	.add_facebook{
+		margin-top: 35px;
+	}
+	.explane{
+		color: gray;
+	}
+	footer{
+		text-align: center;
+		font-size: 12px;
+		color: gray;
+		margin-top: 160px;
+	}
+	footer span{
+		margin-left: 7px;
+		margin-right: 7px;	
+	}
+	a:link{
+		text-decoration:none; color:black;
+	}
+ 	a:visited{ 
+ 		text-decoration:none;color:black;
+ 	}
+ 	a:active{
+ 		text-decoration:none; color:black; 
+ 	}
+ 	a:hover{ 
+ 		text-decoration:none; color:black;
+ 	}
+ 	.color:link{ 
+		text-decoration:none; color:gray;
+	}
+ 	.color:visited{ 
+ 		text-decoration:none;color:gray;
+ 	}
+ 	.color:active{
+ 		text-decoration:none; color:gray; 
+ 	}
+ 	.color:hover{
+ 		text-decoration:none; color:gray;
+ 	}

@@ -1,0 +1,183 @@
+@charset "UTF-8";
+body{
+		margin: 0px;
+		overflow-y: scroll;
+	}
+	nav{
+		width: 100%;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid #DBDBDB;
+	}
+	.header{
+		width: 975px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.header-logo{
+		width: 353.5px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.header-logo img{
+		margin-left: 10px;
+		height: 60px;
+	}
+	.header-search{
+		width: 268px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+	.header-search input{
+		width: 265px;
+	    height: 36px;
+	    padding: 7px;
+	    font-size: 17px;
+	    border-radius: 7px;
+	    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACI0lEQVRIie2Uv2sTcRjGP+/lKqZNLUVrp2wq/mhBJxddWnF0SOsVEhpwKEUCgv9A5zgLocGtUq+cQZCMWg/r5FAQWkFXaatEEfxRhFzu+zqkwZL2rqeufZY7eO95Pt/vA/fCoQ6QRA08z0sHoc4IMqlwDugHNgVZVqPVQsFZ/WeA69YuG8xjIBvhU5DKz+9f787OzgZxACsi3AeyCq8Vcq2mfWJwIHNU1BpRpQz8Ai31Hxt8pKqRLey5QbsW3gNZFa0esaTkOE7YbVpc9C5i8Rw4LiqlfP5mJdENglBnOiePCgcoFJw3onoLQEXnfN+3EwEEmdx5vRcV3lE+P1VHWAOGtxqNq4kACucBwqa9Ehf+xyArO88LiQBAH4Ax37YT5av+ABDIJAVsAaTS6VNJACKcaYPYTAYQfQFgGatwULjneUPAdcCEKV4mA4QyD6gId1y3dinKpKoShNynXU296DgfEgHav79UgF6DefbQ9W7sd/LFpdoSMAWgYspR4bDPqqhWqz2ZgUEXZWLnizVUVkTMNiqntV1L3y7L2zCwx4rFXCMRANoVuG7ttorOAcNdYwPUVUzZUuuBwkgcJHaP+L5vb3z6ciWljKqYXsTaCC191el8YeHJSbuntawwIrDeCuzxbkgsIIk8zxsKDMsoo8A700qNTU9PfOzM92zTv5XjOJ/Dpn1NYB04a9nh093z/wYAFIu5RiuwxxFWgdgddqg9+g0TJuLzCuoJngAAAABJRU5ErkJggg==");
+	    background-size: 20px;
+	    background-repeat: no-repeat;
+	    background-position: 5% center;
+	    text-indent: 13%;
+	    border: none;
+	    background-color: #eeeeee;
+	    position: absolute;
+	}
+	input:focus {
+		outline:none;
+	}
+	.header-menu{
+		width: 353.5px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	.header-menu div{
+		margin-right: 12px;
+	}
+	main{
+		height: 743px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.main1{
+		width: 600px;
+		height: 700px;
+		border: 1px solid lightgray;
+		border-radius: 5px;
+	}
+	.main2{
+		width: 600px;
+		height: 621px;
+		display: flex;
+		justify-content: center;
+		border-bottom: 1px solid lightgray;
+	}
+	.main3{
+		width: 534px;
+		height: 533px;
+	}
+	.title{
+		width: 534px;
+		height: 94px;
+		text-align: center;
+	}
+	.title h1{
+		font-weight: lighter;
+		font-size: 28px;
+	}
+	.creater1, .business1{
+		width: 534px;
+		height: 198px;
+		border: 1px solid lightgray;
+		margin-top: 20px;
+		border-radius: 5px;
+		text-align: center;
+		position: relative;
+	}
+	.creater2, .business2{
+		width: 100%;
+		height: 148px;
+		margin-top: 30px;
+	}
+	.creater_img, .business_img{
+		width: 100%;
+		height: 60px;
+	}
+	.creater_title, .business_title{
+		width: 100%;
+		height: 35px;
+	}
+	.creater_info, .business_info{
+		width: 100%;
+		font-size: 14px;
+		color: gray;
+	}
+	.main3 h2{
+		font-weight: lighter;
+		font-size: 23px;
+	}
+	.check1, .check2{
+		width: 100%;
+		height: 40px;
+		position: absolute;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-left: -10px;
+	}
+	input[type="radio"]{
+		width: 22px;
+		height: 22px;
+	}
+	.button{
+		width: 97%;
+		height: 78px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	input[type="button"]{
+		width: 66px;
+		height: 44px;
+		font-weight: bold;
+		color: white;
+		background-color: dodgerblue;
+		border: none;
+		border-radius: 5px;
+		opacity: 0.3;
+	}
+	footer{
+		text-align: center;
+		font-size: 12px;
+		color: gray;
+		margin-top: 30px;
+	}
+	footer span{
+		margin-left: 7px;
+		margin-right: 7px;
+	}
+	.footer a{
+		text-decoration: none;
+	}
+	a:link{ 
+		text-decoration:none; color:gray;
+	}
+ 	a:visited{ 
+ 		text-decoration:none;color:gray;
+ 	}
+ 	a:active{
+ 		text-decoration:none; color:gray; 
+ 	}
+ 	a:hover{ 
+ 		text-decoration:none; color:gray;
+ 	}
